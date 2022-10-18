@@ -1,6 +1,5 @@
 # Author : BLU3N1N3S
 # Tool : FBBRUTE
-# Note : pa add nalang ng credits kung momodified mo paps
 
 import os
 import os.path
