@@ -1,5 +1,6 @@
 # Author : BLU3N1N3S
 # Tool : FBBRUTE
+# Note : add credits for me if you modified the tool
 
 import os
 import os.path
@@ -52,22 +53,39 @@ def is_this_a_password(email, index, password):
 
 
 if __name__ == "__main__":
-
     os.system("clear")
-    print(Fore.GREEN +"""
+    print(Fore.LIGHTCYAN_EX +"""
 
-   _________________     _____________________  __________________
-   ___  ____/__  __ )    ___  __ )__  __ \_  / / /__  __/__  ____/
-   __  /_   __  __  |    __  __  |_  /_/ /  / / /__  /  __  __/
-   _  __/   _  /_/ /     _  /_/ /_  _, _// /_/ / _  /   _  /___
-   /_/      /_____/      /_____/ /_/ |_| \____/  /_/    /_____/
-                                                               """)
+                  _____ _____  _____  _    _                       
+                 / ____|  __ \|  __ \| |  | |                      
+                | |    | |__) | |__) | |__| |                      
+                |      |  ___/|  ___/|  __  |                      
+                | |____| |    | |    | |  | |                      
+              ___\_____|_|__  |_|___ |_|__|_|_    _ _______ ______ 
+             |  ____|  _ \  |  _ \|  __ \| |  | |__   __|  ____|
+             | |__  | |_) | | |_) | |__) | |  | |  | |  | |__   
+             |  __| |  _ <  |  _ <|  _  /| |  | |  | |  |  __|  
+             | |    | |_) | | |_) | | \ \| |__| |  | |  | |____ 
+             |_|    |____/  |____/|_|  \_\ \____/   |_|  |______|                                                                               
+                                                               
 
-    print("              [*]   CREATED BY BLU3N1N3S [*]")
+                    [*]   CREATED BY BLU3N1N3S   [*]
+
+        ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
+        ║                                                            ║
+        ║  | • Author : BLU3N1N3S                                    ║
+        ║  | • Github : https://github.com/Renzcarl                  ║
+        ║  | • Tool   : CPPH FB-BRUTE                                ║
+        ║                                                            ║
+        ║                                                            ║
+        ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
+
+
+      """)
 
 
     if not os.path.isfile(PASSWORD_FILE):
-        print("Password file is not exist: ", PASSWORD_FILE)
+        print("\nPassword file is not exist: ", PASSWORD_FILE)
         sys.exit(0)
     password_data = open(PASSWORD_FILE, 'r').read().split("\n")
     print("Password file selected: ", PASSWORD_FILE)
@@ -76,6 +94,7 @@ if __name__ == "__main__":
         password = password.strip()
         if len(password) < MIN_PASSWORD_LENGTH:
             continue
-        print("Trying password [", index, "]: ", password)
+        print(Fore.LIGHTGREEN_EX +" [*] Trying password [", index, "]: ", password)
         if is_this_a_password(email, index, password):
             break
+    	
